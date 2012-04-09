@@ -23,4 +23,4 @@ module Traco
   end
 end
 
-ActiveRecord::Base.send :extend, Traco::Translates
+Mongoid::Document.send :extend, Traco::Translates
