@@ -22,5 +22,3 @@ module Traco
     end
   end
 end
-
-Mongoid::Document.send :extend, Traco::Translates
