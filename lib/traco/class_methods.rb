@@ -6,11 +6,11 @@ module Traco
     end
 
     def locales_for_column(column)
-      column_names.grep(/\A#{column}_([a-z]{2})\z/) {
+      fields.keys.grep(/\A#{column}_([a-z]{2})\z/) {
         $1.to_sym
       }.sort_by { |locale|
         if locale == I18n.default_locale
-         :"0"
+          :"0"
         else
           locale
         end
